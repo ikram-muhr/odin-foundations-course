@@ -1,0 +1,35 @@
+.recipes-container   {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+a:has(div) {
+  text-decoration: none;
+  color: #ffffff;
+  flex: 1;
+}
+
+a div {
+  background-color: #ff4500;
+  border-radius: 1rem;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+a div:hover {
+  background-color: #960000;
+}
+
+.subscript {
+  font-size: small;
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
