@@ -14,9 +14,9 @@ This repository contains a collection of projects I worked on during the Foundat
 
 ## 🗂️ Project List
 
-| Project | Teknologi | Status | Live Demo |
-|---|---|---|---|
-| Recipe Page | HTML, CSS | ⏳ Upcoming | - |
+| Project | Tech Stack | Status | Live Demo |
+| --- | --- | --- | --- |
+| Recipe Page | HTML | 🔄 In Progress | <https://ikram-muhr.github.io/odin-foundations-course/01-recipe-page/> |
 | Landing Page | HTML, CSS | ⏳ Upcoming | - |
 | Rock Paper Scissors | HTML, CSS, JS | ⏳ Upcoming | - |
 | Etch-a-Sketch | HTML, CSS, JS | ⏳ Upcoming | - |

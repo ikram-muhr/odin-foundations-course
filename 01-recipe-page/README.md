@@ -1,6 +1,12 @@
 # Recipe Page
 
-A website featuring a collection of recipes
+A website featuring a collection of recipes. Build with HTML
+
+---
+
+## 🔗 Live Demo
+
+[Click here to view the live demo](https://ikram-muhr.github.io/odin-foundations-course/01-recipe-page/)
 
 ---
 
