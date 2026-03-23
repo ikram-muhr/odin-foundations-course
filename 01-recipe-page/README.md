@@ -13,6 +13,7 @@ A website featuring a collection of recipes. Build with HTML
 ## 🛠️ Built With
 
 - HTML5
+- CSS3
 
 ---
 
@@ -23,11 +24,11 @@ A website featuring a collection of recipes. Build with HTML
 
 ## 🤔 The Challenges I Face
 
-- So far, there aren't any. The image sizes just aren't optimal yet, but that will be fixed when the CSS is implemented later.
+- So far, there aren't any
 
 ## 🚧 What I Want to Improve
 
-- Designing pages using CSS
+- Styling the recipe collection on the homepage using preview images of each recipe
 
 ---
 
