@@ -1,12 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <button>Play Game</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Rock paper Scissors Game!</h1>
+    </header>
+
+    <section class="container-score">
+      <div class="human-score">
+        <p>Player</p>
+        <p>0</p>
+      </div>
+      <div class="computer-score">
+        <p>Computer</p>
+        <p>0</p>
+      </div>
+    </section>
+    <main>  
+      <div class="round-board text-center">ROUND 1 of 5</div>
+      <section class="human-side-section">
+        <h2 class="make-your-move-text text-center">Make Your Move!</h2>
+        <div class="container-btn">
+          <button id="rock" class="btn-rock btn-rps">
+            <div>🪨</div>
+            <span>Rock</span>
+          </button>
+          <button id="paper" class="btn-paper btn-rps">
+            <div>📜</div>
+            <span>Paper</span>
+          </button>
+          <button id="scissors" class="btn-scissors btn-rps">
+            <div>✂️</div>
+            <span>Scissors</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- <section  class="text-center">
+      <h1>Rock Paper Scissors Game!</h1>
+      <h2>5 Rounds</h2>
+    </section>
+    <main class="container-page">
+      <section class="human-side-page">
+        <h2 class="text-center">You</h2>
+        <div class="container-btn-rps">
+          <button id="rock" class="btn-rock btn-rps">🪨</button>
+          <button id="paper" class="btn-paper btn-rps">📜</button>
+          <button id="scissors" class="btn-scissors btn-rps">✂️</button>
+        </div>
+      </section>
+      <section class="computer-side-page">
+        <h2 class="text-center">Computer</h2>
+      </section>
+    </main> -->
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
