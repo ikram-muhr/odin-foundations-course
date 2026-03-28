@@ -1,16 +1,16 @@
 # Rock Paper Scissors
 
-A classic Rock Paper Scissors game played in the browser console — built as part of my JavaScript learning journey.
+A classic Rock Paper Scissors game played in the browser — built as part of my JavaScript learning journey.
 
 ## 📖 About
 
-This is a simple console-based game where you play 5 rounds against the computer. Each round, you'll be prompted to choose rock, paper, or scissors. The final score is displayed at the end.
+A simple game of rock-paper-scissors with a simple UI in a browser, featuring a scoreboard and rounds.
 
 ---
 
 ## 🔗 Live Demo
 
-[Click here to view the live demo](https://ikram-muhr.github.io/odin-foundations-course/01-recipe-page/)
+[Click here to view the live demo](https://ikram-muhr.github.io/odin-foundations-course/03-rock-paper-scissors/)
 
 ---
 
@@ -29,14 +29,14 @@ This is a simple console-based game where you play 5 rounds against the computer
     ```
 
 3. Open `index.html` in your browser
-4. Open the browser console (`F12` → Console tab)
-5. Click the **Play Game** button and follow the prompts
-6. Check the result in console tab
+4. Start the game by pressing the rock-paper-scissors button
 
 ---
 
 ## 🛠️ Built With
 
+- HTML5
+- CSS3
 - Javascript
 
 ---
@@ -49,8 +49,7 @@ This is a simple console-based game where you play 5 rounds against the computer
   - Logical operators & comparisons
   - `if / else` statements
 - How to generate random values with `Math.random()`
-- How to get user input with `prompt()`
-- How to keep track of state with variables scoped inside a function
+- How to keep track of state with variables scoped inside a function    
 
 ## 🤔 The Challenges I Face
 
@@ -61,7 +60,7 @@ This is a simple console-based game where you play 5 rounds against the computer
 
 ## 🚧 What I Want to Improve
 
-- Add DOM manipulation to the website to make it more interactive
+- Add more interactive animations for each element that changes
 
 ---
 
