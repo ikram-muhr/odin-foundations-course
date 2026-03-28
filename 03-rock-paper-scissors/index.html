@@ -12,19 +12,22 @@
     </header>
 
     <section class="container-score">
-      <div class="human-score">
+      <div class="human-score-container">
         <p>Player</p>
-        <p>0</p>
+        <p class="human-score">0</p>
       </div>
-      <div class="computer-score">
+      <div class="computer-score-container">
         <p>Computer</p>
-        <p>0</p>
+        <p class="computer-score">0</p>
       </div>
     </section>
-    <main>  
-      <div class="round-board text-center">ROUND 1 of 5</div>
+    <main>
+      <div class="round-board text-center">
+        ROUND <span class="current-round">0</span> of
+        <span class="max-rounds">5</span>
+      </div>
       <section class="human-side-section">
-        <h2 class="make-your-move-text text-center">Make Your Move!</h2>
+        <h2 class="large-billboard-text text-center">Make Your Move!</h2>
         <div class="container-btn">
           <button id="rock" class="btn-rock btn-rps">
             <div>🪨</div>
@@ -41,24 +44,6 @@
         </div>
       </section>
     </main>
-    <!-- <section  class="text-center">
-      <h1>Rock Paper Scissors Game!</h1>
-      <h2>5 Rounds</h2>
-    </section>
-    <main class="container-page">
-      <section class="human-side-page">
-        <h2 class="text-center">You</h2>
-        <div class="container-btn-rps">
-          <button id="rock" class="btn-rock btn-rps">🪨</button>
-          <button id="paper" class="btn-paper btn-rps">📜</button>
-          <button id="scissors" class="btn-scissors btn-rps">✂️</button>
-        </div>
-      </section>
-      <section class="computer-side-page">
-        <h2 class="text-center">Computer</h2>
-      </section>
-    </main> -->
-
     <script src="index.js"></script>
   </body>
 </html>

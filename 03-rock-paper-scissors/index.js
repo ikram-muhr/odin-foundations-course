@@ -1,93 +1,119 @@
-console.log("Welcome to Rock, Paper, Scissors!");
+console.log("Welcome to Rock, Paper, and Scissors GAME!");
 
 const choices = ["rock", "paper", "scissors"];
+const maxRounds = 5;
+const btnRockPaperScissors = document.querySelectorAll(".btn-rps");
+const humanScoreDisplay = document.querySelector(".human-score");
+const computerScoreDisplay = document.querySelector(".computer-score");
+const currentRoundDisplay = document.querySelector(".current-round");
+const maxRoundsdisplay = document.querySelector(".max-rounds");
+const billboardText = document.querySelector(".large-billboard-text");
 
-// Event listener for the button to start the game
-const button = document.querySelector("button");
-button.addEventListener("click", playGame);
+let humanScore = 0;
+let computerScore = 0;
+let currentRound = 0;
+const whoWinner = {
+  isHumanWon: false,
+  text: "",
+};
 
-// Returns null if input is invalid — handled in playRound
-function getHumanChoice() {
-  const humanInput = prompt(
-    "Choose between Rock, Paper, or Scissors!",
-  ).toLowerCase();
-  return choices.includes(humanInput) ? humanInput : null;
-}
-
-function getComputerChoice() {
+const getComputerChoice = () => {
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
-}
+};
 
-function playGame() {
-  // Declare scores and initialize to 0 each time playGame is called
-  let humanScore = 0;
-  let computerScore = 0;
-
-  function playRound(humanSelection, computerSelection) {
-    const notValidInputTemplate = "You didn't enter the value correctly";
-
-    if (humanSelection === null) {
-      return notValidInputTemplate;
-    }
-
-    const winTemplate = `You Win! ${humanSelection} beats ${computerSelection}`;
-    const lossTemplete = `You Lose! ${humanSelection} beats ${computerSelection}`;
-
-    // Ties do not increment either score
-    if (humanSelection === computerSelection) {
-      return `It's a Tie! Both chose ${humanSelection}`;
-    } else {
-      switch (humanSelection) {
-        case "rock":
-          if (computerSelection === "scissors") {
-            humanScore++;
-            return winTemplate;
-          } else {
-            computerScore++;
-            return lossTemplete;
-          }
-        case "paper":
-          if (computerSelection === "rock") {
-            humanScore++;
-            return winTemplate;
-          } else {
-            computerScore++;
-            return lossTemplete;
-          }
-        case "scissors":
-          if (computerSelection === "paper") {
-            humanScore++;
-            return winTemplate;
-          } else {
-            computerScore++;
-            return lossTemplete;
-          }
-        default:
-          return notValidInputTemplate;
-      }
-    }
+const checkWhoWonTheGame = () => {
+  if (currentRound === maxRounds) {
+    whoWinner.isHumanWon = humanScore === maxRounds;
+    whoWinner.text = whoWinner.isHumanWon
+      ? "Congratulation You WON!!!"
+      : "You LOSE in this match! try again...";
+    humanScore = 0;
+    computerScore = 0;
+    currentRound = 0;
   }
+};
 
-  for (let i = 0; i < 5; i++) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-
-    console.log(playRound(humanChoice, computerChoice));
-  }
-
-  let displayWinner;
-  if (humanScore === computerScore) {
-    displayWinner = "I'm  sorry yu both are TIE! Try again.";
-  } else if (humanScore > computerScore) {
-    displayWinner = "Congrats you are a WINNER!";
+const playGame = (humanSelection, computerSelection) => {
+  const winMatchText = () => {
+    billboardText.setAttribute("style", "color: green");
+    return `Nice! ${humanSelection.toUpperCase()} beat ${computerSelection.toUpperCase()}`;
+  };
+  const loseMatchText = () => {
+    billboardText.setAttribute("style", "color: red");
+    return `You Lose! ${humanSelection.toUpperCase()} defeated by ${computerSelection.toUpperCase()}`;
+  };
+  const tieMatchText = () => {
+    billboardText.setAttribute("style", "color: black");
+    return `It's a TIE! Both used ${humanSelection.toUpperCase()}`;
+  };
+  if (humanSelection === computerSelection) {
+    return tieMatchText();
   } else {
-    displayWinner = "You are LOSS... maybe next time.";
+    switch (humanSelection) {
+      case "rock":
+        if (computerSelection === "scissors") {
+          humanScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return winMatchText();
+        } else {
+          computerScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return loseMatchText();
+        }
+      case "paper":
+        if (computerSelection === "rock") {
+          humanScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return winMatchText();
+        } else {
+          computerScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return loseMatchText();
+        }
+      case "scissors":
+        if (computerSelection === "paper") {
+          humanScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return winMatchText();
+        } else {
+          computerScore++;
+          currentRound++;
+          checkWhoWonTheGame();
+          return loseMatchText();
+        }
+      default:
+        break;
+    }
   }
+};
 
-  console.log(
-    `Final Score!
-        You ${humanScore} VS ${computerScore} Computer
-        Result : ${displayWinner}`,
-  );
-}
+btnRockPaperScissors.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const humanChoice = btn.id;
+    const computerChoice = getComputerChoice();
+    const matchResult = playGame(humanChoice, computerChoice);
+
+    billboardText.textContent = matchResult;
+    humanScoreDisplay.textContent = humanScore;
+    computerScoreDisplay.textContent = computerScore;
+    currentRoundDisplay.textContent = currentRound;
+
+    //  The `whoWinner.text` variable will be assigned a value when a winner is determined,
+    // and will be reset at the final stage
+    if (whoWinner.text) {
+      billboardText.textContent = whoWinner.text;
+      billboardText.setAttribute(
+        "style",
+        `color: ${whoWinner.isHumanWon ? "green" : "red"}`,
+      );
+      whoWinner.isHumanWon = false;
+      whoWinner.text = "";
+    }
+  });
+});
