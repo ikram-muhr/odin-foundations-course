@@ -49,7 +49,7 @@ A simple game of rock-paper-scissors with a simple UI in a browser, featuring a 
   - Logical operators & comparisons
   - `if / else` statements
 - How to generate random values with `Math.random()`
-- How to keep track of state with variables scoped inside a function    
+- How to keep track of state with variables scoped inside a function
 
 ## 🤔 The Challenges I Face
 
