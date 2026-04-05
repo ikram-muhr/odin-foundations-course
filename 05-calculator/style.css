@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator-container {
+  background-color: rgb(255, 255, 255);
+  max-width: 420px;
+  border: 10px solid black;
+  border-radius: 1rem;
+  padding:1rem;
+}
+
+#displayText {
+  padding: 4px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: end;
+  background-color: rgb(236, 231, 231);
+}
+
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
+  padding-block : 1rem
+}
+
+.button {
+  background-color: rgb(165, 165, 161);
+  flex: 0 0 calc(25% - 10px); 
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  animation: button-press 0.1s ease;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.button#ac {
+    flex: 0 0 calc(50% - 10px); /* 50% = 2 columns out of 4 columns */
+}
+
+.button:hover {
+  background-color: rgb(146, 137, 137)
+}
+
+.button:active {
+  transform: scale(0.95);
+  background-color: rgb(99, 99, 99);
+}
+
+.button-not-digits{
+  background-color: rgba(187, 48, 168, 0.479);
+}
+
+.button-not-digits:hover {
+  background-color: rgba(187, 48, 168, 0.7);
+}
+
+.button-not-digits:active {
+  background-color: rgba(163, 22, 144, 0.7);
+}
