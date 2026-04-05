@@ -12,8 +12,8 @@ A website featuring a collection of recipes. Build with HTML
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
+- **HTML5**
+- **CSS3**
 
 ---
 

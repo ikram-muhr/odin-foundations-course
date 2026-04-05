@@ -35,9 +35,9 @@ A simple game of rock-paper-scissors with a simple UI in a browser, featuring a 
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
-- Javascript
+- **HTML5** - Structure and UI elements
+- **CSS3** - Simple tyling and layout
+- **Vanilla Javascript** - All logic, state management, event listener, and DOM interaction
 
 ---
 

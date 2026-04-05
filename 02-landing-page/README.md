@@ -38,8 +38,8 @@ A clean, minimalist landing page designed for Book Circle, a digital community f
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
+- **HTML5**
+- **CSS3**
 
 ---
 
@@ -58,9 +58,8 @@ A clean, minimalist landing page designed for Book Circle, a digital community f
 
 ## 🚧 What I Want to Improve
 
-- Make the navigation bar more responsive on small screens by turning it into an icon that, when clicked, displays a pop-up navigation menu
-- Add animations to the landing page, particularly to the images, both during loading and when they first appear
-- Create smoother animations for the image container on small screens by adding left and right buttons for smoother image transitions
+- **Make the navigation bar more responsive on small screens by turning it into an** icon that, when clicked, displays a pop-up navigation menu
+- **Add animations** to the landing page, particularly to the images, both during loading and when they first appear
 
 ---
 

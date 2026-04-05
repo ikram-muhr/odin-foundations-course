@@ -45,9 +45,9 @@ This project is an interactive digital drawing board created as part of the **Th
 
 ## 🛠️ Built With
 
-- **HTML5**
-- **CSS3 (Custom Properties & Flexbox)**
-- **JavaScript (Vanilla)** - DOM manipulation, event listeners, and logic.
+- **HTML5** - Structure and UI elements
+- **CSS3** - Simple tyling and layout
+- **Vanilla Javascript** - All logic, state management, event listener, and DOM interaction
 
 ---
 
