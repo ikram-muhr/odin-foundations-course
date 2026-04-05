@@ -281,17 +281,17 @@ footer p {
   }
 
   .hero-main-text {
+    line-height: 1.2;
     font-size: 28px;
   }
 
   .information-header-image-container {
-    overflow-x: auto;
     justify-content: flex-start;
-    scrollbar-width: none;
+    flex-wrap: wrap;
   }
 
-  .information-header-image-container::-webkit-scrollbar {
-    display: none;
+  .information-header-image-container > div {
+    flex: 1 0 calc((100% - 1rem) / 2);
   }
 
   .information-header-image-container > div {
